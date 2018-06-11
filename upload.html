@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Upload | VORTEX</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/upload.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/styles.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body ng-app="">
+	<img class="background" src="assets/img/background-index.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<form class="mobile-search">
+				<input type="search" name="search" placeholder="Quick search">
+				<img class="icon-search" src="assets/img/icon-search_active.png">
+			</form>
+			<button class="mobile-btn" onclick="toggleButton()"><img class="icon" src="assets/img/icon-menu.png" data-alt-src="assets/img/icon-menu_active.png"></button>
+			<div class="mobile-nav">
+				<div class="mobile-background"></div>
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+				</ul>
+				<form>
+					<input type="search" name="search" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<div class="content-frame">
+				<div class="content">
+
+			<div class="box-info">
+				<div class="box-info-heading"><h1> Upload News.</h1></div>
+					<div class="box-info-detail upload-info no-top-radius">
+						<p> Due to amount of fakes, dumps and non quality uploads being dumped on Vortex we implemented upload restrictions to protect our users and ensure upload quality. </p>
+						<p> Users can request trial-uploader status, our moderators will review your application. </p>
+						<p> 1) Before applying please read Upload Rules.<br>
+						2) In uploader application tell us a brief introduction about you and if you are an existing uploader/encoder.<br>
+						3) If you are a regular uploader in other sites, state your user name in those sites.<br>
+						4) State what type of content you are planning to upload and why.<br>
+						5) If you have accounts at various sites with 25+ torrents contact us via contact form or in Vortex chat.
+						</p>
+					</div>
+			</div>
+			<div class="box-info">
+				<div class="box-info-heading">
+					<h1>Upload File to Vortex</h1>
+				</div>
+				<div class="box-info-detail no-top-radius">
+					<form method="post" id="contact-form" novalidate="true" name="myForm">
+						<div class="form-row login-field">
+							<h4>Upload Torrent:</h4>
+							<input type="file" name="myFile" ng-model="myFile" required>
+							<span ng-show="myForm.myFile.$dirty && myForm.myFile.$invalid" class="userspan">The File is required</span>
+						</div>
+						<div class="form-row login-field">
+							<h4>Torrent name:(if other than file name)</h4>
+							<input type="text" value class="form-control" name="myName" ng-model="myName" required>
+							<span ng-show="myForm.myName.$touched && myForm.myName.$invalid" class="userspan">The name is required</span>
+						</div>
+						<div class="form-row login-field">
+							<h4>What type of torrents you will upload:</h4>
+							<div class="md-select">
+								<label for="ul-id"><button type="button" class="ng-binding">Choose One</button></label>
+								<ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
+								  	<li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">Movies</li>
+								    <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">TV Series</li>
+								    <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Games</li>
+								    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Music</li>
+								    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Applications</li>
+								    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Other</li>
+								</ul>
+								<small class="note">If you plan to upload more then one category just choose category most of your torrents fit in.</small>
+							</div>
+						</div>
+						<div class="form-row login-field">
+							<h4>Description:</h4>
+							<textarea rows="1" cols="1" class="form-control" name="myDesc" ng-model="myDesc" required></textarea>
+							<span ng-show="myForm.myDesc.$touched && myForm.myDesc.$invalid" class="userspan">The Description is required</span>
+						</div>
+						<div class="form-row">
+							<input type="submit" name="submit" value="UPLOAD" class="btn btn-green" ng-disabled="myForm.myName.$touched && myForm.myName.$invalid || myForm.myDesc.$touched && myForm.myDesc.$invalid">
+						</div>
+					</form>
+				</div>
+			</div>
+
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-trending.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-top_100.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="">Rules</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+				<li>
+					<a href="">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+	</div>
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+
+});
+</script>
+</body>
+</html>

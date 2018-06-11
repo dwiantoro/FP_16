@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Register | VORTEX</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/register.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/styles.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body ng-app="">
+	<img class="background" src="assets/img/background-index.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<div class="top-nav">
+				<form>
+					<input type="search" name="" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li>
+						<a href="home.html"><img class="icon icon-nav" src="assets/img/icon-home.png" data-alt-src="assets/img/icon-home_active.png">Home</a>
+					</li>
+					<li>
+						<a href="register.html"><img class="icon icon-nav" src="assets/img/icon-register.png" data-alt-src="assets/img/icon-register_active.png">Register</a>
+					</li>
+					<li>
+						<a id="active" href="login.html"><img class="icon icon-nav" src="assets/img/icon-login.png" data-alt-src="assets/img/icon-login_active.png">Login</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<a class="logo" href=""><img src="assets/img/logo.png"></a>
+			<div class="content-frame">
+				<div class="content">
+					<div class="box-info">
+						<div class="box-info-heading">
+							<h1>Register to Vortex</h1>
+						</div>
+						<div class="box-info-detail no-top-radius">
+							<form method="post" id="contact-form" name="myForm" novalidate>
+								<div class="form-row login-field user">
+									<h4>Username:</h4>
+									<input type="text" value class="form-control" name="myName" ng-model="myName" required=>
+									<span ng-show="myForm.myName.$touched && myForm.myName.$invalid" class="userspan">The name is required</span>
+								</div>
+								<div class="form-row login-field pass">
+									<h4>Password:</h4>
+									<input type="Password" value class="form-control" name="myPass" ng-model="myPass" required=>
+									<span ng-show="myForm.myPass.$touched && myForm.myPass.$invalid" class="passspan">The Password is required</span>
+								</div>
+								<div class="form-row login-field repass">
+									<h4>Password:</h4>
+									<input type="Password" value class="form-control" name="myRepass" ng-model="myRepass" required=>
+									<span ng-show="myForm.myRepass.$touched && myForm.myRepass.$invalid" class="repassspan">The Password is required</span>
+								</div>
+								<form ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate="novalidate">
+								<div class="form-row login-field email">
+									<h4>Email:</h4>
+									<input type="email" value class="form-control" name="myAddress" ng-model="myAddress" required>
+									<span ng-show="myForm.myAddress.$dirty && myForm.myAddress.$invalid">
+									<span ng-show="myForm.myAddress.$error.required" class="addspan">The email is required.</span>
+									<span ng-show="myForm.myAddress.$error.email" class="addspan">Invalid email address.</span>
+									</span>
+								</div>
+								</form>
+						<div class="form-row">
+							<h4>Country:</h4>
+							<div class="md-select">
+								<label for="ul-id"><button type="button" class="ng-binding">Choose your Country</button></label>
+								<ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
+								  	<li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">Alaska</li>
+								    <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Alabama</li>
+								    <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Arkansas</li>
+								    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">American Samoa</li>
+								    <li role="option" id="state2_AZ" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Arizona</li>
+								    <li role="option" id="state2_CA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">California</li>
+								    <li role="option" id="state2_CO" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Colorado</li>
+								    <li role="option" id="state2_CT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Connecticut</li>
+								    <li role="option" id="state2_DC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">District Of Columbia</li>
+								    <li role="option" id="state2_DE" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Delaware</li>
+								    <li role="option" id="state2_FL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Florida</li>
+								    <li role="option" id="state2_FM" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Federated States Of Micronesia</li>
+								    <li role="option" id="state2_GA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Georgia</li>
+								    <li role="option" id="state2_GU" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Guam</li>
+								    <li role="option" id="state2_HI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Hawaii</li>
+								    <li role="option" id="state2_IA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Iowa</li>
+								    <li role="option" id="state2_ID" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Idaho</li>
+								    <li role="option" id="state2_IL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Illinois</li>
+								    <li role="option" id="state2_IN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Indiana</li>
+								    <li role="option" id="state2_KS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Kansas</li>
+								    <li role="option" id="state2_KY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Kentucky</li>
+								    <li role="option" id="state2_LA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Louisiana</li>
+								    <li role="option" id="state2_MA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Massachusetts</li>
+								    <li role="option" id="state2_MD" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Maryland</li>
+								    <li role="option" id="state2_ME" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Maine</li>
+								    <li role="option" id="state2_MH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Marshall Islands</li>
+								    <li role="option" id="state2_MI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Michigan</li>
+								    <li role="option" id="state2_MN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Minnesota</li>
+								    <li role="option" id="state2_MO" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Missouri</li>
+								    <li role="option" id="state2_MP" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Northern Mariana Islands</li>
+								    <li role="option" id="state2_MS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Mississippi</li>
+								    <li role="option" id="state2_MT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Montana</li>
+								    <li role="option" id="state2_NC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">North Carolina</li>
+								    <li role="option" id="state2_ND" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">North Dakota</li>
+								    <li role="option" id="state2_NE" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Nebraska</li>
+								    <li role="option" id="state2_NH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Hampshire</li>
+								    <li role="option" id="state2_NJ" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Jersey</li>
+								    <li role="option" id="state2_NM" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Mexico</li>
+								    <li role="option" id="state2_NV" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Nevada</li>
+								    <li role="option" id="state2_NY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New York</li>
+								    <li role="option" id="state2_OH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Ohio</li>
+								    <li role="option" id="state2_OK" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Oklahoma</li>
+								    <li role="option" id="state2_OR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Oregon</li>
+								    <li role="option" id="state2_PA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Pennsylvania</li>
+								    <li role="option" id="state2_PR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Puerto Rico</li>
+								    <li role="option" id="state2_PW" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Palau</li>
+								    <li role="option" id="state2_RI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Rhode Island</li>
+								    <li role="option" id="state2_SC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">South Carolina</li>
+								    <li role="option" id="state2_SD" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">South Dakota</li>
+								    <li role="option" id="state2_TN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Tennessee</li>
+								    <li role="option" id="state2_TX" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Texas</li>
+								    <li role="option" id="state2_UT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Utah</li>
+								    <li role="option" id="state2_VA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Virginia</li>
+								    <li role="option" id="state2_VI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Virgin Islands</li>
+								    <li role="option" id="state2_VT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Vermont</li>
+								    <li role="option" id="state2_WA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Washington</li>
+								    <li role="option" id="state2_WI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Wisconsin</li>
+								    <li role="option" id="state2_WV" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">West Virginia</li>
+								    <li role="option" id="state2_WY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Wyoming</li>
+								</ul>
+							</div>
+						</div>
+						<div class="form-row">
+							<label>Captcha</label>
+							<div class="g-recaptcha" data-sitekey="6LeTP14UAAAAAAHwHMesg_1QNA14RwkzpfN0g8OB">
+							</div>
+						</div>
+						<div class="form-row">
+							<input type="submit" name="submit" value="REGISTER" class="btn btn-green" ng-disabled="myForm.myName.$touched && myForm.myName.$invalid || myForm.myPass.$touched && myForm.myPass.$invalid || myForm.myRepass.$touched && myForm.myRepass.$invalid ||
+							myForm.myAddress.$touched && myForm.myAddress.$invalid">
+						</div>
+					</form>
+						</div>
+					</div>
+
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-trending_gray.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-top_100_gray.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications_gray.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games_gray.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies_gray.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music_gray.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series_gray.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="">Rules</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+				<li>
+					<a href="">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+	</div>
+
+<script type="text/javascript">
+var app = angular.module('myApp', []);
+app.controller('validateCtrl', function($scope) {
+
+});
+	</script>	
+</body>
+</html>
