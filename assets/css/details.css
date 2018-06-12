@@ -1,0 +1,263 @@
+.content{
+	margin: 16px 0;
+}
+.content-header{
+	margin: 0 0 0 0;
+}
+.details {
+	width: 100%;
+	background: #f0f0f0;
+	padding: 16px;
+	border-radius: 0 0 8px 8px;
+}
+.box-details {
+	background: #302f2f;
+	border-radius: 8px;
+	display: flex;
+	flex-wrap: wrap;
+	white-space: nowrap;
+	margin: 0 0 16px 0;
+}
+.details-list {
+	flex: 1 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+	margin: 8px;
+}
+.details-list li {
+	padding: 8px;
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+}
+.details-list a {
+	color: #f0f0f0;
+	display: inline-block;
+	cursor: pointer;
+}
+.details-list a:hover {
+	text-decoration: underline;
+}
+.details-list strong {
+	width: 60%;
+	display: inline-block;
+	margin: 0 8px 0 0;
+}
+.details-list span {
+	padding: 0 0 0 16px;
+	color: gray;
+	position: relative;
+}
+.details-list span:after {
+	content: ":";
+	font-weight: bold;
+	color: white;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.details-button {
+	flex: 1 1;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+.details-button li {
+	border-radius: 6px;
+	margin: 8px;
+}
+.details-button a {
+	padding: 8px;
+	color: white;
+}
+.btn-magnet {
+	background: #89ad19;
+}
+.btn-torrent {
+	background: #da3a04;
+}
+.btn-anonymous {
+	background: #00ceed;
+}
+.details-button li:hover{
+	background: #fbd666;
+}
+.box-hash {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 16px 0;
+}
+.box-hash strong {
+	color: #302f2f;
+}
+.box-hash span {
+	padding: 0 0 0 16px;
+	color: gray;
+	position: relative;
+}
+.box-hash span:after {
+	content: ":";
+	font-weight: bold;
+	color: #302f2f;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+.tab-nav {
+	color: #302f2f;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	margin: 0 0 16px 0;
+}
+.tab-link {
+	flex: 1 1;
+	padding: 8px;
+	background: #ddd;
+	border-radius: 6px;
+	white-space: nowrap;
+	margin: 0 8px;
+}
+.tab-nav button:hover {
+	background: #fbd666;
+}
+.tab-nav button.active {
+	background: #fbd666;
+}
+.tab-content {
+	padding: 16px;
+	background: #ddd;
+	border-radius: 6px;
+}
+
+#description img {
+	max-width: 320px;
+	margin: 16px auto;
+}
+.tab-content h3 {
+	color: #302f2f;
+	margin: 0 0 16px 0;
+}
+#description strong {
+	color: #302f2f;
+}
+
+#files .folder {
+	color: #302f2f;
+	display: block;
+}
+#files li {
+	color: #302f2f;
+	margin: 0 0 8px 8px;
+}
+#files li span {
+	margin: 0 0 0 8px;
+}
+#files .icon-files {
+	width: 16px;
+	margin: 0 8px 0px 0;
+}
+
+#comment {
+	margin: 0 0 16px 0;
+}
+#comment li {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 0 16px 0;
+}
+#comment button {
+	padding: 8px;
+	background: #fbd666;
+	border-radius: 6px;
+}#comment button:hover {
+	background: #302f2f;
+}
+.avatar {
+	flex: 0 0 72px;
+	background: white;
+	border: 4px solid gray;
+	border-radius: 6px;
+	margin: 0 16px 16px 0;
+}
+.avatar a {
+	padding: 8px;
+}
+.detail {
+	flex: 1 1;
+	padding: 8px;
+	background: #f0f0f0;
+	border: 2px solid gray;
+	border-radius: 6px;
+}
+.detail a {
+	display: inline-block;
+	color: #302f2f;
+	margin: 0 0 8px 0;
+}
+.detail a small {
+	margin: 0 4px 0 0;
+}
+.detail span {
+	color: gray;
+	margin: 0 0 0 8px;
+}
+.detail p {
+	color: gray;
+}
+.post-comment h3 {
+	color: #302f2f;
+	margin: 0 0 16px 0;
+}
+.box-comment {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	margin: 0 0 40px 0;
+}
+.box-comment .detail {
+	padding: 0;
+	background: none;
+	border: none;
+}
+.box-comment form {
+	background: #f0f0f0;
+	position: relative;
+}
+.box-comment textarea {
+	width: 100%;
+	height: 100%;
+	border-radius: 6px;
+	border: 2px solid gray;
+	padding: 8px;
+	resize: none;
+	margin: 0 0 8px 0;
+}
+.box-pagination button {
+	padding: 8px;
+	background: #302f2f !important;
+	border-radius: 6px;
+}
+.box-pagination button:hover {
+	background: #fbd666 !important;
+}
+.box-pagination {
+	width: 100%;
+	margin: 0 0 16px 0;
+	text-align: center;
+}
+
+#tracker li {
+	color: #302f2f;
+	border-top: 1px solid gray;
+}
+#tracker li:first-child {
+	border-top: none;
+}
+#files,
+#comment,
+#tracker {
+	display: none;
+}

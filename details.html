@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Download "Filename" Torrent</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/details.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/styles.js"></script>
+</head>
+<body>
+	<img class="background" src="assets/img/background-index.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<form class="mobile-search">
+				<input type="search" name="search" placeholder="Quick search">
+				<img class="icon-search" src="assets/img/icon-search_active.png">
+			</form>
+			<button class="mobile-btn" onclick="toggleButton()"><img class="icon" src="assets/img/icon-menu.png" data-alt-src="assets/img/icon-menu_active.png"></button>
+			<div class="mobile-nav">
+				<div class="mobile-background"></div>
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+				</ul>
+				<form>
+					<input type="search" name="search" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<div class="content-frame">
+				<div class="content">
+					<h3 class="content-header">Filename</h3>
+					<div class="details">
+						<div class="box-details">
+							<ul class="details-list">
+								<li>
+									<strong>Category</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Type</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Language</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Total Size</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Uploaded By</strong>
+									<span><a>N/A</a></span>
+								</li>
+							</ul>
+							<ul class="details-list">
+								<li>
+									<strong>Downloads</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Last Checked</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Date Uploaded</strong>
+									<span>N/A</span>
+								</li>
+								<li>
+									<strong>Seeders</strong>
+									<span class="seeds">N/A</span>
+								</li>
+								<li>
+									<strong>Leechers</strong>
+									<span class="leeches">N/A</span>
+								</li>
+							</ul>
+							<ul class="details-button">
+								<li class="btn-magnet">
+									<a href=""><img class="icon icon-nav" src="assets/img/icon-magnet.png" data-alt-src="assets/img/icon-magnet_active.png">Magnet Download</a>
+								</li>
+								<li class="btn-torrent">
+									<a href=""><img class="icon icon-nav" src="assets/img/icon-download.png" data-alt-src="assets/img/icon-download_active.png">Torrent Download</a>
+								</li>
+								<li class="btn-anonymous">
+									<a href=""><img class="icon icon-nav" src="assets/img/icon-anonymous.png" data-alt-src="assets/img/icon-anonymous_active.png">Anonymous Download</a>
+								</li>
+							</ul>
+						</div>
+						<div class="box-hash">
+							<p>
+								<strong>Info Hash</strong>
+								<span>N/A</span>
+							</p>
+						</div>
+						<div class="tab-nav">
+							<button class="tab-link active" onclick="openContent(event, 'description')">Description</button>
+							<button class="tab-link" onclick="openContent(event, 'files')">Files</button>
+							<button class="tab-link" onclick="openContent(event, 'comment')">Comment</button>
+							<button class="tab-link" onclick="openContent(event, 'tracker')">Tracker List</button>
+						</div>
+						<div id="description" class="tab-content">
+							<img src="assets/img/logo.png">
+							<h3>Title</h3>
+							<strong>[Descriptions]</strong>
+						</div>
+						<div id="files" class="tab-content">
+							<span class="folder"><img class="icon icon-nav" src="assets/img/img-sample.png">Folder</span>
+							<ul>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+							</ul>
+							<span class="folder"><img class="icon icon-nav" src="assets/img/img-sample.png">Folder</span>
+							<span class="folder"><img class="icon icon-nav" src="assets/img/img-sample.png">Folder</span>
+							<ul>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+								<li><img class="icon icon-files" src="assets/img/img-sample.png">Filename<span>(Size)</span></li>
+							</ul>
+						</div>
+						<div id="comment" class="tab-content">
+							<h3>Comments</h3>
+							<ul>
+								<li>
+									<div class="avatar">
+										<a class="" href=""><img src="assets/img/img-sample.png"></a>
+									</div>
+									<div class="detail">
+										<a href=""><small class="administrator">&#9608</small>Username</a>
+										<span>times</span>
+										<p>Comments</p>
+									</div>
+								</li>
+								<li>
+									<div class="avatar">
+										<a class="" href=""><img src="assets/img/img-sample.png"></a>
+									</div>
+									<div class="detail">
+										<a href=""><small class="moderator">&#9608</small>Username</a>
+										<span>times</span>
+										<p>Comments</p>
+									</div>
+								</li>
+							</ul>
+							<div class="box-pagination">
+								<button>Prev</button>
+								<button class="active">1</button>
+								<button>Next</button>
+							</div>
+							<div class="post-comment">
+								<h3>Post Your Message</h3>
+								<div class="box-comment">
+									<div class="avatar">
+										<a class="" href=""><img src="assets/img/img-sample.png"></a>
+									</div>
+									<form class="detail">
+										<textarea rows="1"  cols="1"></textarea>
+										<button type="submit">Post Comment</button>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div id="tracker" class="tab-content">
+							<h3>Code:</h3>
+							<ul>
+								<li><img class="icon icon-nav" src="assets/img/img-sample.png">udp://tracker.coppersurfer.tk:6969/announce</li>
+								<li><img class="icon icon-nav" src="assets/img/img-sample.png">N/A</li>
+								<li><img class="icon icon-nav" src="assets/img/img-sample.png">N/A</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href="trending.html"><img class="icon icon-nav" src="assets/img/icon-trending_gray.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href="top-100.html"><img class="icon icon-nav" src="assets/img/icon-top_100_gray.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications_gray.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games_gray.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies_gray.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music_gray.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series_gray.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="rules.html">Rules</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+</body>
+</html>

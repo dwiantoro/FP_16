@@ -1,0 +1,130 @@
+.tag-background {
+	width: 440px;
+	position: absolute;
+	top: 12px;
+	right: 56px;
+}
+.content {
+}
+.music-header {
+	height: 42px;
+	padding: 8px;
+	background: #fbd666;
+	border-bottom: 4px solid gray;
+	border-radius: 8px 8px 0 0;
+	position: relative;
+}
+.music-filter {
+	padding: 16px;
+	background: #f0f0f0;
+	border-radius: 0 0 8px 8px;
+	margin: 0 0 16px 0;
+}
+.music-filter ul {
+	text-align: center;
+}
+.music-filter li {
+	display: inline-block;
+	margin: 0 0 0 8px;
+}
+.music-filter li:first-child {
+	margin: 0 0 0 0;
+}
+.music-filter span {
+	display: block;
+	color: gray;
+	margin: 0 0 8px 0;
+}
+.music-filter select {
+	padding: 8px;
+	background: #302f2f;
+	border-radius: 4px;
+}
+.music-filter option {
+	background: #302f2f;
+}
+.music-filter button {
+	padding: 8px 16px;
+	background: #302f2f;
+	border-radius: 4px;
+}
+.music-filter button:hover {
+	background: #fbd666;
+}
+.music-list {
+	margin: 0 0 32px 0;
+}
+.box-music {
+	display: flex;
+	flex-flow: row wrap;
+	background: #f0f0f0;
+	border-radius: 8px;
+	margin: 16px 0 0 0;
+}
+.box-music:first-child {
+	margin: 0 0 0 0;
+}
+.music-cover {
+	flex: 0 0 96px;
+	padding: 16px;
+}
+.music-cover img {
+	width: 96px;
+	background: #302f2f;
+	border: 4px solid gray;
+	border-radius: 8px;
+	margin: auto;
+}
+.music-details {
+	flex: 1 1;
+	padding: 16px;
+}
+.music-details ul {
+	height: 100%;
+	display: flex;
+	flex-flow: column;
+	justify-content: center;
+}
+.music-details li {
+}
+.music-details a {
+	display: inline-block;
+	color: #302f2f;
+}
+.music-details a:hover {
+	color: #fbd666;
+	text-decoration: underline;
+}
+.music-details h2 {
+	margin: 0 0 4px 0;
+}
+.music-details strong {
+	color: #302f2f;
+	display: inline-block;
+	margin: 0 0 8px 0;
+	white-space: nowrap;
+}
+.music-details span {
+	color: gray;
+}
+.music-details label {
+	margin: 0 8px 0 0;
+}
+.music-details p {
+	color: #302f2f;
+}
+.label a {
+	color: #302f2f;
+	margin: 0 0 0 8px;
+	cursor: pointer;
+}
+.label a:hover {
+	color: #302f2f;
+}
+.music-details .separator {
+	display: inline-block;
+	margin: 0 8px;
+}
+.music-details li strong {
+	width: 72px;
+}

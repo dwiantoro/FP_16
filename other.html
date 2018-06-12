@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popular Other Torrents | VORTEX</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/other.css">
+	<link rel="stylesheet" href="assets/css/slick.css">
+	<link rel="stylesheet" href="assets/css/slick-theme.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script src="assets/js/styles.js"></script>
+</head>
+<body>
+	<img class="background" src="assets/img/background-other.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<form class="mobile-search">
+				<input type="search" name="search" placeholder="Quick search">
+				<img class="icon-search" src="assets/img/icon-search_active.png">
+			</form>
+			<button class="mobile-btn" onclick="toggleButton()"><img class="icon" src="assets/img/icon-menu.png" data-alt-src="assets/img/icon-menu_active.png"></button>
+			<div class="mobile-nav">
+				<div class="mobile-background"></div>
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+				</ul>
+				<form>
+					<input type="search" name="search" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<a class="logo" href="home.html"><img src="assets/img/logo.png"></a>
+			<img class="tag-background" src="assets/img/tag-other.png">
+			<div class="content-frame">
+				<div class="content">
+					<div class="table-list">
+						<h3 class="content-header">
+							<img class="icon icon-header" src="assets/img/icon-other.png">
+							<img class="tag-header" src="assets/img/header-other.png">
+						</h3>
+						<table>
+							<thead>
+								<tr>
+									<th class="col-1 name">Name</th>
+									<th class="col-2">Seeds</th>
+									<th class="col-3">Leeches</th>
+									<th class="col-time">Time</th>
+									<th class="col-4">
+										<span class="size">Size</span>
+										<span class="info">Info</span>
+									</th>
+									<th class="col-5">Uploader</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+								<tr>
+									<td class="col-1 name">
+										<a href="details.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png">Filename</a>
+										<span class="box-icon-comment"><img class="icon icon-comment" src="assets/img/icon-comment.png">99</span>
+									</td>
+									<td class="col-2 seeds">9999</td>
+									<td class="col-3 leeches">9999</td>
+									<td class="col-time">10am Jun. 6th</td>
+									<td class="col-4 size mob">999.9 GB<span class="seeds">999.9 GB</span></td>
+									<td class="col-5 user"><a href="">vortex</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+					<hr>
+					<div class="box-user">
+						<ul>
+							<li class="administrator">Administrator</li>
+							<li class="moderator">Moderator</li>
+							<li class="vip">VIP</li>
+							<li class="uploader">Uploader</li>
+							<li class="trial">Trial Uploader</li>
+							<li class="user">User</li>
+						</ul>
+					</div>
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-trending_gray.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-top_100_gray.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications_gray.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games_gray.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies_gray.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music_gray.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series_gray.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="">Rules</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+				<li>
+					<a href="">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+</body>
+</html>

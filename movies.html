@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Popular Movie Torrents | VORTEX</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/movies.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://apis.google.com/js/client.js?onload=onClientLoad" type="text/javascript"></script>
+	<script type="text/javascript" src="https://www.googleapis.com/youtube/v3/search?part=snippet&q=php&key=AIzaSyB0sYG2uP9gtVMaN0CmsPLgqrGMOgfXfQ8"></script>
+	<script src="assets/js/ytembed.js"></script>
+	<script src="assets/js/styles.js"></script>
+</head>
+<body>
+	<img class="background" src="assets/img/background-movies.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<form class="mobile-search">
+				<input type="search" name="search" placeholder="Quick search">
+				<img class="icon-search" src="assets/img/icon-search_active.png">
+			</form>
+			<button class="mobile-btn" onclick="toggleButton()"><img class="icon" src="assets/img/icon-menu.png" data-alt-src="assets/img/icon-menu_active.png"></button>
+			<div class="mobile-nav">
+				<div class="mobile-background"></div>
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+				</ul>
+				<form>
+					<input type="search" name="search" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<a class="logo" href="home.html"><img src="assets/img/logo.png"></a>
+			<img class="tag-background" src="assets/img/tag-movies.png">
+			<div class="content-frame">
+				<div class="content">
+					<div class="filter">
+						<h3 class="content-header">
+							<img class="icon icon-header" src="assets/img/icon-movies.png">
+							<img class="tag-header" src="assets/img/header-movies.png">
+						</h3>
+						<form>
+							<ul>
+								<li>
+									<label>Quality:</label>
+									<select>
+										<option>All</option>
+										<option>720p</option>
+										<option>1080p</option>
+										<option>3D</option>
+									</select>
+								</li>
+								<li>
+									<label>Genre:</label>
+									<select>
+										<option value="all">All</option>
+										<option value="action">Action</option>
+										<option value="adventure">Adventure</option>
+										<option value="animation">Animation</option>
+										<option value="biography">Biography</option>
+										<option value="comedy">Comedy</option>
+										<option value="crime">Crime</option>
+										<option value="documentary">Documentary</option>
+										<option value="drama">Drama</option>
+										<option value="family">Family</option>
+										<option value="fantasy">Fantasy</option>
+										<option value="film-noir">Film-Noir</option>
+										<option value="game-show">Game-Show</option>
+										<option value="history">History</option>
+										<option value="horror">Horror</option>
+										<option value="music">Music</option>
+										<option value="musical">Musical</option>
+										<option value="mystery">Mystery</option>
+										<option value="news">News</option>
+										<option value="reality-tv">Reality-TV</option>
+										<option value="romance">Romance</option>
+										<option value="sci-fi">Sci-Fi</option>
+										<option value="sport">Sport</option>
+										<option value="talk-show">Talk-Show</option>
+										<option value="thriller">Thriller</option>
+										<option value="war">War</option>
+										<option value="western">Western</option>
+									</select>
+								</li>
+								<li>
+									<label>Rating:</label>
+									<select>
+										<option>All</option>
+										<option>9+</option>
+										<option>8+</option>
+										<option>7+</option>
+										<option>6+</option>
+										<option>5+</option>
+										<option>4+</option>
+										<option>3+</option>
+										<option>2+</option>
+										<option>1+</option>
+									</select>
+								</li>
+								<li>
+									<label>Order By:</label>
+									<select>
+										<option>Latest</option>
+										<option>Oldest</option>
+										<option>Seeds</option>
+										<option>Peers</option>
+										<option>Year</option>
+										<option>Rating</option>
+										<option>Likes</option>
+										<option>Alphabetical</option>
+										<option>Downloads</option>
+									</select>
+								</li>
+								<li>
+									<button type="submit">Sort</button>
+								</li>
+							</ul>
+						</form>
+					</div>
+					<div class="ytembed">
+						<form onsubmit="ytEmbed.init({
+							'block':'youtubeDivSearch',
+							'type':'search',
+							'q':document.getElementById('ytSearchField').value,
+							'results': 6,
+							'meta':false,
+							'player':'embed',
+							'width':640,
+							'height':360,
+							'layout':'thumbnails'
+						}); return false;">
+							<input type="text" id="ytSearchField" placeholder="Search for youtube videos..." autocomplete="off">
+							<button type="submit">Search</button>
+						</form>
+					</div>
+					<div id="youtubeDivSearch"></div>
+					<div class="content-movies">
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+						<div class="container">
+							<div class="box-content">
+								<a href="details.html">
+									<img src="assets/img/img-sample.png">
+									<div class="details"></div>
+									<div class="tag-details">
+										<ul>
+											<li><img class="icon icon-rating" src="assets/img/icon-rating.png">- / 10</li>
+											<li>Genre</li>
+											<li>View Details</li>
+										</ul>
+									</div>
+								</a>
+							</div>
+							<div class="box-title">
+								<a href="">Title</a>
+								<span>Year</span>
+							</div>
+						</div>
+					</div>
+					<div class="box-pagination">
+						<ul>
+							<li class="active"><a href="">1</a></li>
+							<li><a href="">2</a></li>
+							<li><a href="">3</a></li>
+							<li class="disabled">...</li>
+							<li><a href="">99</a></li>
+							<li><a href="">100</a></li>
+							<li><a href="">Next »</a></li>
+							<li><a href="">Last »</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-trending_gray.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-top_100_gray.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications_gray.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games_gray.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies_gray.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music_gray.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series_gray.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="rules.html">Rules</a>
+				</li>
+				<li>
+					<a href="contact.html">Contact</a>
+				</li>
+				<li>
+					<a href="about.html">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+	</div>
+</body>
+</html>

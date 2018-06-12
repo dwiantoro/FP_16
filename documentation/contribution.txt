@@ -1,0 +1,64 @@
+Christian_T.A.P(16.11.0155) {
+  ("assets/img/*", 100%); // Original images designed using Adobe Photoshop
+}
+
+Dwi_Antoro_Wicaksono(16.11.0169) {
+
+  login.html(60%),
+  register.html(40%),
+  upload.html(60%)
+  {
+    content.register(100%);
+    content.login(100%);
+    content.upload(100%);
+  }
+
+  applications.html(20%)
+  games.html(20%);
+  other.html(20%);
+
+  angular.js(100%);
+  js.dropdown(100%);
+  ytembed.js(30%);
+
+  documentation(90%);
+}
+
+Bika_Albiruni_Dharma(16.11.0192) {
+
+  register.html(40%),
+  login.html(60%),
+  upload.html(40%)
+  {
+    layout(100%);
+    frame(100%);
+    top-bar(100%);
+    side-bar(100%);
+    bottom-bar(100%);
+  }
+
+  details.html(100%);
+  home.html(100%);
+  index.html(100%);
+  movies.html(100%);
+  music.html(100%);
+  settings.html(100%);
+  tv.html(100%);
+  mobile-menu(100%);
+
+  applications.html(80%)
+  games.html(80%);
+  other.html(80%);
+
+  settings.html(90%) {
+    js.dropdown(0%);
+  }
+
+  styles.js(sourceSwap)(100%);
+  styles.js(tab-nav)(100%);
+  styles.js(toggleButton)(100%);
+  slick.js(100%);
+  ytembed.js(70%);
+
+  documentation(10%);
+}

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Settings | VORTEX</title>
+	<link rel="shortcut icon" type="image/png" href="assets/img/logo.png"/>
+	<link rel="stylesheet" href="assets/css/styles.css">
+	<link rel="stylesheet" href="assets/css/settings.css">
+	<link rel="stylesheet" href="assets/css/dropdown.css">
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="assets/js/styles.js"></script>
+</head>
+<body>
+	<img class="background" src="assets/img/background-index.jpg">
+	<div class="top-bar">
+		<div class="frame">
+			<form class="mobile-search">
+				<input type="search" name="search" placeholder="Quick search">
+				<img class="icon-search" src="assets/img/icon-search_active.png">
+			</form>
+			<button class="mobile-btn" onclick="toggleButton()"><img class="icon" src="assets/img/icon-menu.png" data-alt-src="assets/img/icon-menu_active.png"></button>
+			<div class="mobile-nav">
+				<div class="mobile-background"></div>
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li>
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+			<div class="top-nav">
+				<ul>
+					<li>
+						<a href="upload.html"><img class="icon icon-nav" src="assets/img/icon-upload.png" data-alt-src="assets/img/icon-upload_active.png">Upload</a>
+					</li>
+				</ul>
+				<form>
+					<input type="search" name="search" placeholder="Quick search">
+					<img class="icon-search" src="assets/img/icon-search_active.png">
+				</form>
+				<ul>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-uploads.png" data-alt-src="assets/img/icon-uploads_active.png">Uploads</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-notifications.png" data-alt-src="assets/img/icon-notifications_active.png">Notifications</a>
+					</li>
+					<li class="hide">
+						<a href=""><img class="icon icon-nav" src="assets/img/icon-inbox.png" data-alt-src="assets/img/icon-inbox_active.png">Inbox</a>
+					</li>
+					<li>
+						<a href="settings.html"><img class="icon icon-nav" src="assets/img/icon-settings.png" data-alt-src="assets/img/icon-settings_active.png">Settings</a>
+					</li>
+					<li>
+						<a id="active" href="index.html"><img class="icon icon-nav" src="assets/img/icon-logout.png" data-alt-src="assets/img/icon-logout_active.png">Logout</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="main-frame">
+		<div class="frame">
+			<div class="content-frame">
+				<div class="content">
+					<div class="details">
+						<h3 class="content-header">Your Account</h3>
+						<div class="box-details">
+							<ul class="details-list">
+								<li>
+									<strong>Username</strong>
+									<span>noobcoded</span>
+								</li>
+								<li>
+									<strong>User Rank</strong>
+									<span>User</span>
+								</li>
+								<li>
+									<strong>Privacy</strong>
+									<span>Normal</span>
+								</li>
+								<li>
+									<strong>Join Date</strong>
+									<span>3 weeks ago</span>
+								</li>
+							</ul>
+							<ul class="details-list">
+								<li>
+									<strong>Age</strong>
+									<span>26</span>
+								</li>
+								<li>
+									<strong>Gender</strong>
+									<span>Male</span>
+								</li>
+								<li>
+									<strong>Country</strong>
+									<span>Indonesia</span>
+								</li>
+								<li>
+									<strong>Email</strong>
+									<span>noobcoded@gmail.com</span>
+								</li>
+							</ul>
+							<div class="box-photo">
+								<a href=""><img src="assets/img/logo.png"></a>
+							</div>
+						</div>
+
+						<div class="tab-nav">
+							<button class="tab-link active" onclick="openSettings(event, 'setting')">Settings</button>
+							<button class="tab-link" onclick="openSettings(event, 'change-password')">Change Password</button>
+							<button class="tab-link" onclick="openSettings(event, 'change-email')">Change Email</button>
+						</div>
+
+						<div class="content-nav">
+							<div id="setting" class="tab-content">
+								<form>
+									<div class="privacy">
+										<h4>Privacy Level</h4>
+										<label><input type="radio" name="privacy_level" value="normal_privacy" checked>Normal</label>
+										<label><input type="radio" name="privacy_level" value="strong_privacy">Strong</label>
+										<span class="label-info">Selecting 'Strong' will disallow registered users (all except Moderators and Admins) to send you private messages</span>
+									</div>
+									<div class="avatar">
+										<h4>Avatar Link</h4>
+										<input type="text" name="avatar_link">
+										<span class="label-info">Avatar image should be ~ 128 x 128 px</span>
+									</div>
+									<div class="gender-age">
+										<h4>Gender & Age</h4>
+										<label><input type="radio" name="gender" value="male">Male</label>
+										<label><input type="radio" name="gender" value="female">Female</label>
+										<span class="label-info">Please enter your age</span>
+										<input type="text" name="age">
+									</div>
+									<div class="country">
+											<h4>Country</h4>
+										<div class="md-select">
+											<label for="ul-id"><button type="button" class="ng-binding">Choose your Country</button></label>
+											<ul role="listbox" id="ul-id" class="md-whiteframe-z1" aria-activedescendant="state2_AK" name="ul-id">
+										  	<li role="option" id="state2_AK" class="ng-binding ng-scope active" tabindex="-1" aria-selected="true">Alaska</li>
+										    <li role="option" id="state2_AL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Alabama</li>
+										    <li role="option" id="state2_AR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Arkansas</li>
+										    <li role="option" id="state2_AS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">American Samoa</li>
+										    <li role="option" id="state2_AZ" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Arizona</li>
+										    <li role="option" id="state2_CA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">California</li>
+										    <li role="option" id="state2_CO" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Colorado</li>
+										    <li role="option" id="state2_CT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Connecticut</li>
+										    <li role="option" id="state2_DC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">District Of Columbia</li>
+										    <li role="option" id="state2_DE" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Delaware</li>
+										    <li role="option" id="state2_FL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Florida</li>
+										    <li role="option" id="state2_FM" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Federated States Of Micronesia</li>
+										    <li role="option" id="state2_GA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Georgia</li>
+										    <li role="option" id="state2_GU" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Guam</li>
+										    <li role="option" id="state2_HI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Hawaii</li>
+										    <li role="option" id="state2_IA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Iowa</li>
+										    <li role="option" id="state2_ID" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Idaho</li>
+										    <li role="option" id="state2_IL" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Illinois</li>
+										    <li role="option" id="state2_IN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Indiana</li>
+										    <li role="option" id="state2_KS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Kansas</li>
+										    <li role="option" id="state2_KY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Kentucky</li>
+										    <li role="option" id="state2_LA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Louisiana</li>
+										    <li role="option" id="state2_MA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Massachusetts</li>
+										    <li role="option" id="state2_MD" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Maryland</li>
+										    <li role="option" id="state2_ME" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Maine</li>
+										    <li role="option" id="state2_MH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Marshall Islands</li>
+										    <li role="option" id="state2_MI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Michigan</li>
+										    <li role="option" id="state2_MN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Minnesota</li>
+										    <li role="option" id="state2_MO" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Missouri</li>
+										    <li role="option" id="state2_MP" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Northern Mariana Islands</li>
+										    <li role="option" id="state2_MS" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Mississippi</li>
+										    <li role="option" id="state2_MT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Montana</li>
+										    <li role="option" id="state2_NC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">North Carolina</li>
+										    <li role="option" id="state2_ND" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">North Dakota</li>
+										    <li role="option" id="state2_NE" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Nebraska</li>
+										    <li role="option" id="state2_NH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Hampshire</li>
+										    <li role="option" id="state2_NJ" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Jersey</li>
+										    <li role="option" id="state2_NM" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New Mexico</li>
+										    <li role="option" id="state2_NV" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Nevada</li>
+										    <li role="option" id="state2_NY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">New York</li>
+										    <li role="option" id="state2_OH" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Ohio</li>
+										    <li role="option" id="state2_OK" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Oklahoma</li>
+										    <li role="option" id="state2_OR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Oregon</li>
+										    <li role="option" id="state2_PA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Pennsylvania</li>
+										    <li role="option" id="state2_PR" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Puerto Rico</li>
+										    <li role="option" id="state2_PW" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Palau</li>
+										    <li role="option" id="state2_RI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Rhode Island</li>
+										    <li role="option" id="state2_SC" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">South Carolina</li>
+										    <li role="option" id="state2_SD" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">South Dakota</li>
+										    <li role="option" id="state2_TN" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Tennessee</li>
+										    <li role="option" id="state2_TX" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Texas</li>
+										    <li role="option" id="state2_UT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Utah</li>
+										    <li role="option" id="state2_VA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Virginia</li>
+										    <li role="option" id="state2_VI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Virgin Islands</li>
+										    <li role="option" id="state2_VT" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Vermont</li>
+										    <li role="option" id="state2_WA" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Washington</li>
+										    <li role="option" id="state2_WI" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Wisconsin</li>
+										    <li role="option" id="state2_WV" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">West Virginia</li>
+										    <li role="option" id="state2_WY" class="ng-binding ng-scope" tabindex="-1" aria-selected="false">Wyoming</li>
+											</ul>
+											<span class="label-info">The country that you are from</span>
+										</div>
+										<button class="active" type="submit">Save Changes</button>
+									</div>
+								</form>
+							</div>
+							<div id="change-password" class="tab-content">
+								<form>
+									<strong>Old Password</strong>
+									<input type="password" name="">
+									<span>Enter your old password here.</span>
+									<hr>
+									<strong>New Password</strong>
+									<input type="password" name="">
+									<strong>Retype Password</strong>
+									<input type="password" name="">
+									<button type="submit">Change Password</button>
+								</form>
+							</div>
+							<div id="change-email" class="tab-content">
+								<form>
+									<strong>New Email</strong>
+									<input type="email" name="">
+									<span>Enter your email here.</span>
+									<hr>
+									<strong>Retype new Email</strong>
+									<input type="email" name="">
+									<button type="submit">Change Email</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="side-bar">
+					<div class="side-nav">
+						<h3>Browse Torrents</h3>
+						<ul>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-trending_gray.png" data-alt-src="assets/img/icon-trending_active.png">Trending Torrents</a>
+							</li>
+							<li>
+								<a href=""><img class="icon icon-nav" src="assets/img/icon-top_100_gray.png" data-alt-src="assets/img/icon-top_100_active.png">Top 100 Torrents</a>
+							</li>
+							<li>
+								<a href="applications.html"><img class="icon icon-nav" src="assets/img/icon-applications_gray.png" data-alt-src="assets/img/icon-applications_active.png">Applications</a>
+							</li>
+							<li>
+								<a href="games.html"><img class="icon icon-nav" src="assets/img/icon-games_gray.png" data-alt-src="assets/img/icon-games_active.png">Games</a>
+							</li>
+							<li>
+								<a href="movies.html"><img class="icon icon-nav" src="assets/img/icon-movies_gray.png" data-alt-src="assets/img/icon-movies_active.png">Movies</a>
+							</li>
+							<li>
+								<a href="music.html"><img class="icon icon-nav" src="assets/img/icon-music_gray.png" data-alt-src="assets/img/icon-music_active.png">Music</a>
+							</li>
+							<li>
+								<a href="tv.html"><img class="icon icon-nav" src="assets/img/icon-tv_series_gray.png" data-alt-src="assets/img/icon-tv_series_active.png">TV Series</a>
+							</li>
+							<li>
+								<a href="other.html"><img class="icon icon-nav" src="assets/img/icon-other_gray.png" data-alt-src="assets/img/icon-other_active.png">Other</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="bottom-bar">
+		<div class="frame">
+			<ul>
+				<li>
+					<a href="">Rules</a>
+				</li>
+				<li>
+					<a href="">Contact</a>
+				</li>
+				<li>
+					<a href="">About</a>
+				</li>
+			</ul>
+			<br>
+			<span>VORTEX © 2018</span>
+		</div>
+	</div>
+</body>
+</html>
